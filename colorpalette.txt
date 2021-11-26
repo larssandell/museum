@@ -1,0 +1,26 @@
+Black: #040404
+skrift: #000000 / #ffffff
+blå bakgrunn: #397684
+grå: #F2F2F2
+Tiktok:
+Rød: #EE1D52
+Blå: #69C9D0
+
+navbar kasnkje: #333
+
+
+
+Black: #040404 eller: #000000
+Pink ish: #de8c9d   eller: #F1AFDD
+red: #fe2858   eller: #FE2C55
+light blue: #2af0ea eller: #25F4EE
+dark blue: #397684
+White: #ffffff
+
+
+
+Mulig? : Hex: #DC3AFD lilla
+
+
+Design color palette:
+Gruppen er veldig intresert i TikTok, derfor ønkser jeg å implementere farge paletten, som vil appellere til ungdomen.

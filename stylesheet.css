@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Roboto", "PlayfairDisplay-VariableFont_wght", sans-serif,
+        Verdana, Tahoma;
+    src: url(/fonts/Roboto-Regular.ttf) format("truetype");
+    src: url(/fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    font-family: "roboto";
+    position: relative;
+    min-height: 100vh;
+}
+
+/* grid-header */
+#header-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "hl hn ."
+        "hcn hcn hcn";
+}
+.header-logo {
+    grid-area: hl;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.header-name {
+    grid-area: hn;
+    align-self: center;
+}
+.header-center-nav {
+    grid-area: hcn;
+}
+.header-right-nav {
+    grid-area: hrn;
+    padding-right: 10px;
+}
+
+/* footer grid */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4rem;
+}
+/* header */
+header {
+    background-color: #397684;
+}
+
+.logo-atom {
+    width: 80px;
+    height: auto;
+}
+
+.header-center-nav {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.header-center-nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.header-center-nav a:hover {
+    background-color: #f2f2f2;
+    color: #040404;
+}
+
+.header-center-nav a.active {
+    text-decoration: underline;
+}
+.header-right-nav {
+    display: none;
+}
+.header-name h1 {
+    font-family: "PlayfairDisplay-VariableFont_wght";
+    text-align: center;
+    color: #ffffff;
+}
+h1 {
+    margin: 0;
+}
+
+/* body */
+.moon-banner {
+    width: 100%;
+    height: 170px;
+}
+.info-bar {
+    background-color: #040404;
+    height: 40px;
+    width: 100%;
+    margin-top: -4px;
+}
+.info-bar h1 {
+    color: #ffffff;
+    text-align: center;
+}
+.content {
+    padding-bottom: 4rem;
+}
+/* footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    max-height: 65px;
+}
+.footer-img {
+    height: 60px;
+    width: auto;
+}
+.footer-grid > div {
+    background: url(/Images/komprimert/bar.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    min-width: 100%;
+}
+.footer-center {
+    /* position: relative;
+    display: flex; */
+    justify-content: center;
+}
+.footer-left {
+}
+footer p {
+    color: #fff;
+    font-size: 0.7rem;
+    margin-left: 10px;
+    padding-top: 10px;
+}
