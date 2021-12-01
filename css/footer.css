@@ -1,0 +1,80 @@
+ul {
+    display: flex;
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+}
+
+ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.footer-right .fab:hover {
+    color: linear-gradient(
+        90deg,
+        rgba(105, 201, 208, 1) 24%,
+        rgba(238, 29, 82, 1) 100%
+    );
+}
+
+ul li a::before {
+    content: "";
+    /* position: absolute; */
+
+    border-radius: 50%;
+    background: linear-gradient(
+        90deg,
+        rgba(105, 201, 208, 1) 24%,
+        rgba(238, 29, 82, 1) 100%
+    );
+    transition: 0.5s;
+    transform: scale(0.9);
+    z-index: -1;
+}
+
+ul li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px
+        linear-gradient(
+            90deg,
+            rgba(105, 201, 208, 1) 24%,
+            rgba(238, 29, 82, 1) 100%
+        );
+}
+
+ul li a:hover {
+    color: linear-gradient(
+        90deg,
+        rgba(105, 201, 208, 1) 24%,
+        rgba(238, 29, 82, 1) 100%
+    );
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
+}
+.fa-tiktok {
+    font-size: 200px;
+    color: #fff;
+}
+.fa-tiktok:hover {
+    color: linear-gradient(
+        90deg,
+        rgba(105, 201, 208, 1) 24%,
+        rgba(238, 29, 82, 1) 100%
+    );
+    -webkit-text-fill-color: transparent;
+}

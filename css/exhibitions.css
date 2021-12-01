@@ -1,32 +1,116 @@
 /* Grid Exhibitions */
+
 #main-grid-exhi {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    margin: 20px 10px 20px 10px;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: repeat(5, 1fr);
+    margin: 40px 10px 40px 10px;
     row-gap: 10px;
     box-sizing: border-box;
+    grid-template-areas:
+        ". one ."
+        ". two ."
+        ". three ."
+        ". four ."
+        ". five .";
 }
-#main-grid-exhi h2 {
-    font-size: 15px;
+.box-one {
+    grid-area: one;
+    background-image: url(/Images/komprimert/galaxy-168kb.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+.box-two {
+    grid-area: two;
+    background-color: #000;
+}
+.box-three {
+    grid-area: three;
+}
+.dino {
+    grid-area: four;
+    position: relative;
+    background-color: #000;
+}
+.box-five {
+    grid-area: five;
+}
+
 #main-grid-exhi a {
     text-decoration: none;
     margin: 0;
+    cursor: pointer;
 }
-/* Promo Cards Exhibitions */
-#main-grid-exhi > div {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-}
-#main-grid-exhi > a:hover {
-    box-sizing: border-box;
-    box-shadow: 2px 2px 5px 2px rgba(57, 118, 132, 0.89);
-}
-#main-grid-exhi a {
-    text-decoration: none;
+
+/* Text */
+#main-grid-exhi h2 {
+    font-size: 15px;
 }
 #main-grid-exhi h2 {
     text-align: center;
+}
+.exhi-one h2 {
+    color: #fff;
+}
+.exhi-two h2 {
+    color: #fff;
+}
+.exhi-three h2 {
+    color: #000;
+}
+.exhi-five h2 {
+    color: #000;
+}
+/* Promo Cards Exhibitions */
+
+#main-grid-exhi > a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#main-grid-exhi > a:hover {
+    box-shadow: 2px 2px 5px 2px rgba(57, 118, 132, 0.89);
+}
+
+/* images */
+.exhi-one img {
+    height: 150px;
+    width: auto;
+}
+.exhi-two img {
+    height: 150px;
+    width: auto;
+}
+.exhi-three img {
+    height: 150px;
+    width: auto;
+}
+.exhi-four img {
+    height: 150px;
+    width: auto;
+}
+.exhi-five img {
+    height: 150px;
+    width: auto;
+}
+.exhi-four {
+    /* grid-area: 2; */
+    /* height: 200px;
+    width: 400px; */
+    /* min-height: 150px;
+    min-width: auto;
+    background: url("/Images/komprimert/2-dino-white.png") no-repeat;
+    background-size: contain;
+    background-position: center; */
+}
+.dino:hover {
+    position: relative;
+    background-image: url("/Images/komprimert/2-dino-tiktok.png");
+    background-repeat: no-repeat;
+    min-height: 150px;
+    min-width: auto;
+    background-size: contain;
+    background-position: center;
+    /* z-index: 99; */
 }
