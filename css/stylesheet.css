@@ -261,6 +261,10 @@ footer {
 .footer-left {
     font-size: large;
 }
+.footer-right a {
+    margin-right: 20px;
+    /* margin-top: 5px; */
+}
 footer p {
     color: #fff;
     font-size: 0.6rem;

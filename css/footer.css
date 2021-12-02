@@ -1,8 +1,6 @@
-ul {
+/* ul {
     display: flex;
-    /* position: absolute;
-    top: 50%;
-    left: 50%; */
+
     transform: translate(-50%, -50%);
 }
 
@@ -34,8 +32,6 @@ ul li a {
 
 ul li a::before {
     content: "";
-    /* position: absolute; */
-
     border-radius: 50%;
     background: linear-gradient(
         90deg,
@@ -77,4 +73,55 @@ ul li a:hover {
         rgba(238, 29, 82, 1) 100%
     );
     -webkit-text-fill-color: transparent;
+} */
+.footer-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: right;
+}
+.footer-right .fab {
+    font-size: 40px;
+}
+.footer-right a {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 43px;
+    transition: 0.5s;
+    color: (0, 0, 0, 0);
+}
+
+/* .footer-right a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgb(105, 201, 208);
+} */
+
+.footer-right a:hover {
+    background: linear-gradient(
+        233deg,
+        rgba(105, 201, 208, 1),
+        rgba(238, 29, 82, 1),
+        #3d9c31,
+        #37bbde
+    );
+    /* width: 100%; */
+    /* height:100vh; */
+    /* background-size: cover; */
+    /* background-blend-mode: hard-light; */
+    animation: hue-rotate 3s linear infinite;
+}
+
+@keyframes hue-rotate {
+    from {
+        filter: hue-rotate(0);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
 }
