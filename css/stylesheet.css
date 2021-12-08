@@ -386,6 +386,9 @@ footer p {
     #main-grid h2 {
         font-size: 4vw;
     }
+    .content {
+        padding-bottom: 5rem;
+    }
 
     /* footer */
     footer p {

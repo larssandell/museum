@@ -20,20 +20,25 @@
 }
 .exhi-cos {
     grid-area: cos;
+    max-width: 858px;
 }
 .exhi-ai {
     grid-area: ai;
     background-color: var(--black-gray);
+    max-width: 858px;
 }
 .exhi-exo {
     grid-area: exo;
+    max-width: 858px;
 }
 .exhi-dino {
     grid-area: dino;
     background-color: var(--black-gray);
+    max-width: 1744px;
 }
 .exhi-med {
     grid-area: med;
+    max-width: 858px;
 }
 /* Text */
 h2 {
@@ -67,9 +72,6 @@ h2 {
 
 /* Promo Cards Exhibitions */
 
-#main-grid-exhi > a:hover {
-    box-shadow: 2px 2px 5px 2px rgba(57, 118, 132, 0.89);
-}
 .exhi-dino img {
     position: relative;
     max-height: 250px;
@@ -93,7 +95,7 @@ h2 {
         grid-template-rows: auto auto 350px;
         margin: auto;
         column-gap: 25px;
-        margin: 0 10%;
+        margin: 0 25% 0 25%;
         grid-template-areas:
             "cos ai"
             "exo med"
@@ -112,7 +114,7 @@ h2 {
         margin-top: 80px;
     }
     h2 {
-        font-size: 4vw;
+        font-size: 3vw;
     }
     /* #main-grid-exhi {
         display: grid;
@@ -128,4 +130,9 @@ h2 {
         #main-grid-exhi > div {
         max-height: 680px;
     }*/
+}
+@media only screen and (min-width: 2166px) {
+    h2 {
+        font-size: 2vw;
+    }
 }
