@@ -1,116 +1,131 @@
 /* Grid Exhibitions */
-
 #main-grid-exhi {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-    grid-template-rows: repeat(5, 1fr);
-    margin: 40px 10px 40px 10px;
-    row-gap: 10px;
-    box-sizing: border-box;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 250px auto;
+    margin: 20px 10px 20px 10px;
+    row-gap: 20px;
     grid-template-areas:
-        ". one ."
-        ". two ."
-        ". three ."
-        ". four ."
-        ". five .";
-}
-.box-one {
-    grid-area: one;
-    background-image: url(/Images/komprimert/galaxy-168kb.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.box-two {
-    grid-area: two;
-    background-color: #000;
-}
-.box-three {
-    grid-area: three;
-}
-.dino {
-    grid-area: four;
-    position: relative;
-    background-color: #000;
-}
-.box-five {
-    grid-area: five;
+        "cos"
+        "ai"
+        "exo"
+        "dino"
+        "med";
 }
 
-#main-grid-exhi a {
-    text-decoration: none;
-    margin: 0;
-    cursor: pointer;
-}
-
-/* Text */
-#main-grid-exhi h2 {
-    font-size: 15px;
-}
-#main-grid-exhi h2 {
-    text-align: center;
-}
-.exhi-one h2 {
-    color: #fff;
-}
-.exhi-two h2 {
-    color: #fff;
-}
-.exhi-three h2 {
-    color: #000;
-}
-.exhi-five h2 {
-    color: #000;
-}
-/* Promo Cards Exhibitions */
-
-#main-grid-exhi > a {
+#main-grid-exhi > div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    position: relative;
 }
-#main-grid-exhi > a:hover {
-    box-shadow: 2px 2px 5px 2px rgba(57, 118, 132, 0.89);
+.exhi-cos {
+    grid-area: cos;
+}
+.exhi-ai {
+    grid-area: ai;
+    background-color: var(--black-gray);
+}
+.exhi-exo {
+    grid-area: exo;
+}
+.exhi-dino {
+    grid-area: dino;
+    background-color: var(--black-gray);
+}
+.exhi-med {
+    grid-area: med;
+}
+/* Text */
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 6vw;
+    font-weight: 700;
+    max-width: 860px;
+}
+#main-grid-exhi h2 {
+    background-color: rgba(255, 255, 255, 0.562);
+}
+
+/* hyperlinks */
+#main-grid-exhi a {
+    text-decoration: none;
+    color: #000;
 }
 
 /* images */
-.exhi-one img {
-    height: 150px;
-    width: auto;
+#main-grid-exhi img {
+    width: 100%;
+    height: 100%;
 }
-.exhi-two img {
-    height: 150px;
-    width: auto;
+.layer {
+    display: inline-block;
 }
-.exhi-three img {
-    height: 150px;
-    width: auto;
+
+/* Promo Cards Exhibitions */
+
+#main-grid-exhi > a:hover {
+    box-shadow: 2px 2px 5px 2px rgba(57, 118, 132, 0.89);
 }
-.exhi-four img {
-    height: 150px;
-    width: auto;
-}
-.exhi-five img {
-    height: 150px;
-    width: auto;
-}
-.exhi-four {
-    /* grid-area: 2; */
-    /* height: 200px;
-    width: 400px; */
-    /* min-height: 150px;
-    min-width: auto;
-    background: url("/Images/komprimert/2-dino-white.png") no-repeat;
-    background-size: contain;
-    background-position: center; */
-}
-.dino:hover {
+.exhi-dino img {
     position: relative;
-    background-image: url("/Images/komprimert/2-dino-tiktok.png");
-    background-repeat: no-repeat;
-    min-height: 150px;
-    min-width: auto;
-    background-size: contain;
-    background-position: center;
-    /* z-index: 99; */
+    max-height: 250px;
+}
+.exhi-dino:hover .overlay {
+    display: inline;
+}
+.overlay {
+    display: none;
+    position: absolute;
+    top: -254px;
+    left: 0;
+    z-index: 99;
+    max-height: 250px;
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (min-width: 900px) {
+    #main-grid-exhi {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto 350px;
+        margin: auto;
+        column-gap: 25px;
+        margin: 0 10%;
+        grid-template-areas:
+            "cos ai"
+            "exo med"
+            "dino dino";
+    }
+    .exhi-dino img {
+        max-height: 350px;
+    }
+    .overlay {
+        top: -354px;
+    }
+    .info-bar {
+        margin-bottom: 30px;
+    }
+    .content {
+        margin-top: 80px;
+    }
+    h2 {
+        font-size: 4vw;
+    }
+    /* #main-grid-exhi {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 2fr 1fr;
+        margin: 20px 10px 20px 10px;
+        row-gap: 20px;
+        grid-template-areas:
+            "cos ai"
+            "med exo"
+            "dino dino";
+    } 
+        #main-grid-exhi > div {
+        max-height: 680px;
+    }*/
 }

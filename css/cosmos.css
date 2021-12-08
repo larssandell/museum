@@ -1,0 +1,80 @@
+#cos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 20px 10px 20px 10px;
+    row-gap: 20px;
+    position: relative;
+    justify-content: center;
+    grid-template-areas:
+        "cos-one"
+        "cos-two"
+        "cos-three";
+}
+#cos-grid > div {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+}
+/* #cos-grid {
+    margin: 20px 20px 50px 20px;
+}
+#cos-grid > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+#cos-grid p {
+    word-wrap: break-word;
+    line-height: 1.6;
+}
+.cos-one {
+    grid-area: cos-one;
+}
+.cos-two {
+    grid-area: cos-two;
+    padding: 0 20px 0 20px;
+    background-color: var(--black-gray);
+    color: #fff;
+}
+.cos-three {
+    grid-area: cos-three;
+}
+.cos-one img {
+    max-width: 100%;
+    /* max-height: 100%; */
+    /* object-fit: cover; */
+}
+.cos-two img {
+    height: auto;
+    width: 100%;
+    max-width: 860px;
+    /* max-height: 558px; */
+}
+.cos-three img {
+    /* max-height: 100%; */
+    max-width: 100%;
+    width: fit-content;
+}
+@media only screen and (min-width: 900px) {
+    #cos-grid p {
+        font-size: 25px;
+    }
+    body {
+        background-image: url(/Images/pexels-kai-pilger-1341279.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #cos-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 20px;
+        margin-top: 7%;
+        grid-template-areas: "cos-one cos-two cos-three";
+    }
+}

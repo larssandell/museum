@@ -4,15 +4,29 @@
     src: url(/fonts/Roboto-Regular.ttf) format("truetype");
     src: url(/fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
 }
+* {
+    box-sizing: border-box;
+}
+:root {
+    --blue-bg: #397684;
+    --black-gray: #040404;
+    --light-gray: #f2f2f2;
+    --red-tiktok: #ee1d52;
+    --blue-tiktok: #69c9d0;
+    --gradient: linear-gradient(
+        90deg,
+        rgba(105, 201, 208, 1) 24%,
+        rgba(238, 29, 82, 1) 100%
+    );
+}
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
-    font-family: "roboto";
+    background-color: var(--light-gray);
+    font-family: "roboto", sans-serif, Verdana, Tahoma;
     position: relative;
     min-height: 100vh;
-    /* box-sizing: border-box; */
 }
 body a {
     cursor: pointer;
@@ -21,7 +35,7 @@ body a {
 /* grid-header */
 #header-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "hl hn hrn";
 }
@@ -39,8 +53,6 @@ body a {
     padding-right: 10px;
     position: relative;
     align-self: center;
-    /* padding-left: 100px;
-    padding-bottom: 30px; */
 }
 .header-right-nav a {
     text-decoration: none;
@@ -48,7 +60,8 @@ body a {
     display: block;
 }
 .header-right-nav a:hover {
-    color: rgb(105, 201, 208);
+    color: var(--black-gray);
+    background-color: var(--light-gray);
 }
 .header-right-nav .fas {
     cursor: pointer;
@@ -65,7 +78,6 @@ body a {
 }
 .header-right-nav li {
     list-style-type: none;
-    /* overflow: none; */
     padding: 2px;
     background-color: #0e0e0c;
 }
@@ -80,7 +92,7 @@ body a {
 
 /* header */
 header {
-    background-color: #397684;
+    background-color: var(--blue-bg);
 }
 
 .logo-atom {
@@ -97,34 +109,17 @@ header {
     font-family: "PlayfairDisplay-VariableFont_wght";
     text-align: center;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 5vw;
 }
 h1,
 h2 {
     margin: 0;
 }
-/* Main Grid index */
-#main-grid-1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    /* margin-top: 20px; */
-    margin: 20px 10px 20px 10px;
-    row-gap: 10px;
-    box-sizing: border-box;
-}
-#main-grid-1 h2 {
-    font-size: 30px;
-}
-#main-grid-1 a {
-    text-decoration: none;
-    margin: 0;
-}
+
 /* navigation */
 .menu {
     display: none;
     overflow: none;
-    box-sizing: border-box;
     /* overflow: overlay;
     position: absolute;
     margin-left: -114px;
@@ -135,10 +130,56 @@ h2 {
 }
 #hamburger-menu {
     display: none;
-    /* overflow: none; */
+}
+/* Main Grid index */
+
+/* main grid */
+#main-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin: 20px 10px 20px 10px;
+    row-gap: 10px;
+    position: relative;
+    justify-content: center;
+    grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four";
+}
+#main-grid > div {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+#main-grid a {
+    text-decoration: none;
+    color: #fff;
+}
+.card-one {
+    grid-area: one;
+}
+.card-two {
+    grid-area: two;
+}
+.card-three {
+    grid-area: three;
+}
+.card-four {
+    grid-area: four;
+}
+.card-five {
+    grid-area: five;
+}
+#main-grid > div:hover {
+    box-shadow: 2px 2px 5px 2px rgba(57, 118, 132, 0.89);
 }
 
 /* body index */
+.banner {
+    background-color: #0e0e0c;
+}
 .moon-banner {
     width: 100%;
     height: auto;
@@ -148,9 +189,9 @@ h2 {
     align-items: center;
     justify-content: center;
     background-color: #0e0e0c;
+    color: #fff;
     height: 30px;
     width: 100%;
-    margin-top: -4px;
 }
 .info-h1 {
     user-select: none;
@@ -160,73 +201,43 @@ h2 {
 .content {
     padding-bottom: 4rem;
 }
-/* Promo Cards */
-#main-grid-1 > div {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-}
-#main-grid-1 > a:hover {
-    box-sizing: border-box;
-    box-shadow: 2px 2px 5px 2px rgba(57, 118, 132, 0.89);
-}
-.card-one {
-    color: #000;
-}
-.card-two {
-    color: #fff;
-}
-.card-three {
-    color: #000;
-}
-.card-four {
-    color: #fff;
-}
-#main-grid-1 a {
-    text-decoration: none;
-}
-#main-grid-1 h2 {
-    text-align: center;
-}
-.card-one img {
-    height: 110px;
-    width: auto;
-    margin: 6px 0 0 5px;
-}
-.card-two img {
-    height: 110px;
-    width: auto;
-    float: right;
-    margin: 8px 5px 0 0;
-}
-.card-three img {
-    height: 110px;
-    width: auto;
-    margin: 6px 0 0 5px;
-}
-.card-four img {
-    height: 110px;
-    width: auto;
-    margin: 8px 5px 0 0;
-    float: right;
-}
-.black {
-    background-color: #040404;
-}
-.white {
-    background-color: #f2f2f2;
-}
-.black h2 {
+.link {
     display: inline-block;
-    padding: 50px 0 0 20px;
-    position: absolute;
+    width: 100%;
+    height: 100%;
 }
-.white h2 {
-    display: inline-block;
-    padding: 50px 0 0 20px;
-    position: absolute;
+/* Promo Cards index*/
+#main-grid img {
+    height: 100%;
+    width: 100%;
+    max-width: 860px;
 }
 
+/* hyperlinks and text */
+#main-grid h2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 6vw;
+    font-weight: 700;
+    max-width: 860px;
+    background-color: rgba(255, 255, 255, 0.562);
+    color: #000;
+}
+#main-grid a:hover {
+    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.75);
+}
+#main-grid-exhi a:hover {
+    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.75);
+}
+#book-grid a:hover {
+    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.75);
+}
+#events-grid a:hover {
+    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.75);
+}
 /* footer */
 .footer-grid {
     display: grid;
@@ -235,12 +246,8 @@ h2 {
 }
 footer {
     background-attachment: fixed;
-    background: rgb(105, 201, 208);
-    background: linear-gradient(
-        90deg,
-        rgba(105, 201, 208, 1) 24%,
-        rgba(238, 29, 82, 1) 100%
-    );
+    background: var(--blue-tiktok);
+    background: var(--gradient);
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -265,9 +272,33 @@ footer {
     margin-right: 20px;
     /* margin-top: 5px; */
 }
+.footer-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: right;
+}
+.footer-right .fab {
+    font-size: 25px;
+    color: #fff;
+}
+.footer-right a {
+    width: 15px;
+    height: 25px;
+    text-align: center;
+}
+
+.fab:hover {
+    color: rgba(105, 201, 208, 1);
+    transition: all 2s;
+    transform: rotateY(360deg);
+}
+
 footer p {
     color: #fff;
-    font-size: 0.6rem;
+    font-size: 10px;
     margin-left: 10px;
     padding-top: 10px;
 }
@@ -277,7 +308,7 @@ footer p {
     /* header */
     #header-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 1fr auto;
         grid-template-areas:
             "hl hn ."
@@ -289,6 +320,11 @@ footer p {
         padding-right: 0;
         position: relative;
         align-self: center;
+    }
+    .logo-atom {
+        width: 100%;
+        height: 100%;
+        max-width: 150px;
     }
     .menu {
         display: inline-block;
@@ -304,7 +340,7 @@ footer p {
     }
     .header-right-nav a {
         float: left;
-        color: #f2f2f2;
+        color: var(--light-gray);
         text-align: center;
         padding: 10px 12px;
         text-decoration: none;
@@ -323,15 +359,8 @@ footer p {
         margin-bottom: -4px;
     }
     .header-right-nav a:hover {
-        background-color: #f2f2f2;
-        color: #040404;
-    }
-    .header-name h1 {
-        font-size: 3rem;
-    }
-    .logo-atom {
-        width: 80px;
-        height: auto;
+        background-color: var(--light-gray);
+        color: var(--black-gray);
     }
     /* body */
     .info-bar {
@@ -345,11 +374,30 @@ footer p {
         color: #ffffff;
         font-size: 2rem;
     }
+    #main-grid {
+        column-gap: 10px;
+        margin: 80px 10px 0px 10px;
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-areas:
+            "one two"
+            "three four";
+    }
+    #main-grid h2 {
+        font-size: 4vw;
+    }
+
     /* footer */
     footer p {
-        color: #fff;
-        font-size: 0.7rem;
+        font-size: 20px;
         margin-left: 10px;
-        padding-top: 10px;
+        padding-top: 1px;
+    }
+    .footer-right .fab {
+        font-size: 35px;
+    }
+    .footer-right a {
+        width: 31px;
+        height: 31px;
     }
 }

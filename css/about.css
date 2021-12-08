@@ -1,0 +1,147 @@
+#about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 20px 10px 20px 10px;
+    max-width: 1300px;
+    position: relative;
+    row-gap: 20px;
+    grid-template-areas:
+        "about-one"
+        "banner"
+        "volun"
+        "about-donate"
+        "intern"
+        "about-two"
+        "about-three"
+        "about-four";
+}
+#about-grid > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    word-wrap: break-word;
+}
+.main {
+    margin: 50px 0 20px 0;
+}
+#about-grid h2 {
+    text-align: center;
+    flex-direction: column;
+}
+.p-center {
+    text-align: center;
+}
+.about-one {
+    grid-area: about-one;
+}
+.about-two {
+    grid-area: about-two;
+    background-color: var(--black-gray);
+    color: #fff;
+    margin-top: -20px;
+}
+.about-three {
+    grid-area: about-three;
+}
+.about-four {
+    grid-area: about-four;
+    background-color: var(--black-gray);
+    color: #fff;
+}
+.about-donate {
+    grid-area: about-donate;
+    align-content: center;
+}
+.volunteer {
+    grid-area: volun;
+    background-color: var(--black-gray);
+    color: #fff;
+}
+.Internships {
+    grid-area: intern;
+}
+.about-banner {
+    grid-area: banner;
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(105, 201, 208, 1) 24%,
+        rgba(238, 29, 82, 1) 100%
+    );
+}
+.about-donate label {
+    justify-self: center;
+}
+.about-donate input {
+    margin-bottom: 10px;
+}
+
+.about-banner img {
+    height: 70px;
+    width: auto;
+}
+.about-donate form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+#donate {
+    height: 40px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+}
+button {
+    background: linear-gradient(
+        90deg,
+        rgba(105, 201, 208, 1) 24%,
+        rgba(238, 29, 82, 1) 100%
+    );
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    height: 50px;
+    width: 200px;
+}
+button:hover {
+    box-shadow: 4px 4px 5px 0px rgba(105, 201, 208, 0.75);
+    border: 1px #fff solid;
+}
+.donate-btn {
+    width: 100%;
+}
+.about-banner img {
+    animation: spin 4s linear infinite;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@media only screen and (min-width: 900px) {
+    #about-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: auto;
+        width: 50%;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 20px;
+    }
+    button {
+        font-size: 25px;
+    }
+    .info-bar {
+        margin-bottom: 30px;
+    }
+    .content {
+        margin-top: 20px;
+    }
+}
