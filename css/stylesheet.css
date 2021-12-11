@@ -1,6 +1,5 @@
 @font-face {
-    font-family: "Roboto", "PlayfairDisplay-VariableFont_wght", sans-serif,
-        Verdana, Tahoma;
+    font-family: "Roboto", "PlayfairDisplay-VariableFont_wght";
     src: url(/fonts/Roboto-Regular.ttf) format("truetype");
     src: url(/fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
 }
@@ -8,6 +7,8 @@
     box-sizing: border-box;
 }
 :root {
+    --museum-font: "PlayfairDisplay-VariableFont_wght";
+    --body-font: "roboto", sans-serif;
     --blue-bg: #397684;
     --black-gray: #040404;
     --light-gray: #f2f2f2;
@@ -19,17 +20,20 @@
         rgba(238, 29, 82, 1) 100%
     );
 }
-
+html {
+    height: 100%;
+}
 body {
     margin: 0;
     padding: 0;
     background-color: var(--light-gray);
-    font-family: "roboto", sans-serif, Verdana, Tahoma;
+    font-family: var(--body-font);
     position: relative;
-    min-height: 100vh;
+    min-height: 100%;
 }
 body a {
     cursor: pointer;
+    text-decoration: none;
 }
 
 /* grid-header */
@@ -41,8 +45,7 @@ body a {
 }
 .header-logo {
     grid-area: hl;
-    padding-left: 10px;
-    padding-top: 2px;
+    padding: 2px 0;
 }
 .header-name {
     grid-area: hn;
@@ -55,31 +58,38 @@ body a {
     align-self: center;
 }
 .header-right-nav a {
-    text-decoration: none;
     color: #ffffff;
     display: block;
+    text-align: center;
+    padding: 5px;
 }
-.header-right-nav a:hover {
-    color: var(--black-gray);
+.header-right-nav a:hover,
+.header-right-nav a:focus {
+    color: #000;
     background-color: var(--light-gray);
+    transition: 0.5s ease-out;
 }
 .header-right-nav .fas {
     cursor: pointer;
     font-size: 30px;
     padding: 5px 5px;
-    margin-top: 3px;
-    margin-right: 40px;
 }
 .header-right-nav ul {
     overflow: overlay;
     position: absolute;
     margin-left: -114px;
-    margin-top: 40px;
+    margin-top: 45px;
+    box-shadow: 0 0 10px #0e0e0c;
+    padding: 5px 0;
+    width: 120px;
+    height: 170px;
+    font-size: 20px;
+    background-color: #0e0e0c;
+    z-index: 1;
 }
 .header-right-nav li {
     list-style-type: none;
     padding: 2px;
-    background-color: #0e0e0c;
 }
 .header-right-nav i {
     color: #fff;
@@ -93,20 +103,23 @@ body a {
 /* header */
 header {
     background-color: var(--blue-bg);
+    grid-area: header;
+    max-height: 231px;
 }
-
 .logo-atom {
     width: 60px;
     height: auto;
+    display: block;
+    margin: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
-
 .header-right-nav a.active {
     text-decoration: underline;
 }
-
 .museum-name {
     user-select: none;
-    font-family: "PlayfairDisplay-VariableFont_wght";
+    font-family: var(--museum-font);
     text-align: center;
     color: #ffffff;
     font-size: 5vw;
@@ -119,11 +132,6 @@ h2 {
 /* navigation */
 .menu {
     display: none;
-    overflow: none;
-    /* overflow: overlay;
-    position: absolute;
-    margin-left: -114px;
-    margin-top: 40px; */
 }
 #hamburger-menu:checked ~ nav {
     display: block;
@@ -131,9 +139,11 @@ h2 {
 #hamburger-menu {
     display: none;
 }
-/* Main Grid index */
 
-/* main grid */
+/* main grid index */
+main {
+    grid-area: main;
+}
 #main-grid {
     display: grid;
     grid-template-columns: auto;
@@ -154,7 +164,6 @@ h2 {
     position: relative;
 }
 #main-grid a {
-    text-decoration: none;
     color: #fff;
 }
 .card-one {
@@ -172,13 +181,11 @@ h2 {
 .card-five {
     grid-area: five;
 }
-#main-grid > div:hover {
-    box-shadow: 2px 2px 5px 2px rgba(57, 118, 132, 0.89);
-}
 
 /* body index */
 .banner {
     background-color: #0e0e0c;
+    grid-area: banner;
 }
 .moon-banner {
     width: 100%;
@@ -192,20 +199,19 @@ h2 {
     color: #fff;
     height: 30px;
     width: 100%;
+    grid-area: info-bar;
 }
 .info-h1 {
     user-select: none;
     color: #ffffff;
     font-size: 1.2rem;
 }
-.content {
-    padding-bottom: 4rem;
-}
 .link {
     display: inline-block;
     width: 100%;
     height: 100%;
 }
+
 /* Promo Cards index*/
 #main-grid img {
     height: 100%;
@@ -226,54 +232,81 @@ h2 {
     background-color: rgba(255, 255, 255, 0.562);
     color: #000;
 }
-#main-grid a:hover {
+#main-grid a:hover,
+#main-grid a:focus {
     box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.75);
 }
-#main-grid-exhi a:hover {
+#main-grid-exhi a:hover,
+#main-grid-exhi a:focus {
     box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.75);
 }
-#book-grid a:hover {
+#book-grid a:hover,
+#book-grid a:focus {
     box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.75);
 }
-#events-grid a:hover {
+#events-grid a:hover,
+#events-grid a:focus {
     box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.75);
 }
+p {
+    padding-left: 10px;
+}
+
+/* buttons */
+button {
+    background: var(--gradient);
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    text-align: center;
+    font-family: "roboto";
+}
+button:hover,
+button:focus {
+    box-shadow: 4px 4px 5px 0px rgba(105, 201, 208, 0.75);
+    border: 1px #fff solid;
+    transition: all ease 0.3s;
+    font-weight: 700;
+    font-size: 18px;
+}
+
 /* footer */
 .footer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 4rem;
+    grid-template-rows: auto;
+    margin-top: 50px;
 }
 footer {
-    background-attachment: fixed;
-    background: var(--blue-tiktok);
     background: var(--gradient);
-    position: absolute;
-    bottom: 0;
+    position: sticky;
+    top: 100%;
     width: 100%;
-    height: 4rem;
-    max-height: 65px;
+    max-height: 70px;
+    grid-area: footer;
 }
+
+/* footer content */
 .footer-img {
     height: 60px;
     width: auto;
+    display: block;
+    margin: auto;
 }
 .footer-grid > div {
     display: flex;
     min-width: 100%;
 }
 .footer-center {
-    justify-content: center;
+    padding: 1px 0;
 }
 .footer-left {
     font-size: large;
 }
 .footer-right a {
     margin-right: 20px;
-    /* margin-top: 5px; */
 }
 .footer-right {
-    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -289,18 +322,17 @@ footer {
     height: 25px;
     text-align: center;
 }
-
-.fab:hover {
+.fab:hover,
+.fab:focus {
     color: rgba(105, 201, 208, 1);
     transition: all 2s;
     transform: rotateY(360deg);
 }
-
 footer p {
     color: #fff;
     font-size: 10px;
     margin-left: 10px;
-    padding-top: 10px;
+    align-self: center;
 }
 
 /* Media Queries */
@@ -321,11 +353,6 @@ footer p {
         position: relative;
         align-self: center;
     }
-    .logo-atom {
-        width: 100%;
-        height: 100%;
-        max-width: 150px;
-    }
     .menu {
         display: inline-block;
     }
@@ -343,13 +370,24 @@ footer p {
         color: var(--light-gray);
         text-align: center;
         padding: 10px 12px;
-        text-decoration: none;
         font-size: 30px;
     }
     .header-right-nav ul {
         position: relative;
         margin: 0;
         padding: 0;
+    }
+    .header-right-nav ul {
+        overflow: overlay;
+        position: relative;
+        margin: 0;
+        box-shadow: none;
+        padding: 0;
+        width: auto;
+        height: auto;
+        font-size: 20px;
+        background-color: #333;
+        z-index: 0;
     }
     .header-right-nav li {
         display: inline-block;
@@ -358,20 +396,29 @@ footer p {
         padding: 0;
         margin-bottom: -4px;
     }
-    .header-right-nav a:hover {
+    .header-right-nav a:hover,
+    .header-right-nav a:focus {
         background-color: var(--light-gray);
         color: var(--black-gray);
+        transition: 0.5s ease-out;
     }
+    .menu {
+        display: inline-block;
+    }
+    .logo-atom {
+        width: 100%;
+        height: 100%;
+        max-width: 150px;
+    }
+
     /* body */
     .info-bar {
         height: 50px;
     }
     .moon-banner {
-        display: none;
+        display: none !important;
     }
     .info-h1 {
-        user-select: none;
-        color: #ffffff;
         font-size: 2rem;
     }
     #main-grid {
@@ -386,8 +433,13 @@ footer p {
     #main-grid h2 {
         font-size: 4vw;
     }
-    .content {
-        padding-bottom: 5rem;
+    button:hover,
+    button:focus {
+        box-shadow: 4px 4px 5px 0px rgba(105, 201, 208, 0.75);
+        border: 1px #fff solid;
+        transition: all ease 0.3s;
+        font-weight: 700;
+        font-size: 28px;
     }
 
     /* footer */

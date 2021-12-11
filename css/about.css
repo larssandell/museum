@@ -1,3 +1,4 @@
+/* about grid */
 #about-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -23,6 +24,8 @@
     position: relative;
     word-wrap: break-word;
 }
+
+/* main content */
 .main {
     margin: 50px 0 20px 0;
 }
@@ -32,6 +35,19 @@
 }
 .p-center {
     text-align: center;
+    padding: 0;
+}
+.visit::before,
+.visit::after {
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    content: "\f21d";
+    color: var(--red-tiktok);
+    padding: 0 10px;
+    display: inline;
+}
+.visit::before {
+    color: var(--blue-tiktok);
 }
 .about-one {
     grid-area: about-one;
@@ -65,11 +81,7 @@
 .about-banner {
     grid-area: banner;
     width: 100%;
-    background: linear-gradient(
-        90deg,
-        rgba(105, 201, 208, 1) 24%,
-        rgba(238, 29, 82, 1) 100%
-    );
+    background: var(--gradient);
 }
 .about-donate label {
     justify-self: center;
@@ -77,10 +89,12 @@
 .about-donate input {
     margin-bottom: 10px;
 }
-
 .about-banner img {
     height: 70px;
     width: auto;
+}
+.about-four ul {
+    padding: 0;
 }
 .about-donate form {
     display: flex;
@@ -90,23 +104,12 @@
 #donate {
     height: 40px;
 }
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    appearance: none;
-}
 button {
-    background: linear-gradient(
-        90deg,
-        rgba(105, 201, 208, 1) 24%,
-        rgba(238, 29, 82, 1) 100%
-    );
-    color: #fff;
-    cursor: pointer;
-    border: 0;
     height: 50px;
     width: 200px;
 }
-button:hover {
+button:hover,
+button:focus {
     box-shadow: 4px 4px 5px 0px rgba(105, 201, 208, 0.75);
     border: 1px #fff solid;
 }
@@ -116,11 +119,13 @@ button:hover {
 .about-banner img {
     animation: spin 4s linear infinite;
 }
+
 @keyframes spin {
     100% {
         transform: rotate(360deg);
     }
 }
+
 @media only screen and (min-width: 900px) {
     #about-grid {
         display: grid;
