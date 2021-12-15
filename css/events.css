@@ -46,7 +46,6 @@ p {
 
 @media only screen and (min-width: 800px) {
     #events-grid {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr auto;
         column-gap: 20px;
@@ -54,6 +53,9 @@ p {
         grid-template-areas:
             "event-one event-two"
             "event-three event-three";
+    }
+    #events-grid > div {
+        justify-content: unset;
     }
     .img-three {
         align-self: center;
@@ -84,5 +86,13 @@ p {
         margin: 20px 50px 30px 50px;
         grid-template-areas: "event-one event-three event-three event-two";
         /* ". event-three event-three ."; */
+    }
+    .event-two {
+        background-color: var(---light-gray);
+        color: #000;
+    }
+    .event-three {
+        background-color: var(--black-gray);
+        color: #fff;
     }
 }
