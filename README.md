@@ -1,25 +1,42 @@
-# Your project title
+# The Science Museum
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
-
-A simple overview of the use/purpose of the project.
+![image](https://github.com/larssandell/smart-inspection-copy/blob/main/smartinspection.png)
 
 ## Description
 
 Add a more detailed description of what your project entails and set out to do.
 
-You can add some bullet points if you'd like to:
+In this school project i choosed to remake a homepage for a local company Smart Inspection.
+For the project i was tasked to design a new homepage, create the homepage with HTML,CSS and JavaScript.
+i used wordpress as a headless CMS and create content so i could fetch the data to the site.
 
-- List item 1
-- List item 2
-- List item 3
+Pages that it includes:
+- Home page
+- About page
+- list of blogs
+- blog specific page
+- Contact page
+
+### JavaScript
+
+- Features a latest post carousel
+- API Call
+- Form submit validator
+- String query | blog spesific
+
+### Design tools
+- Figma
+- Photoshop
+- Illustrator
+- Maze for Interaction Design
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,github,ai,ps,netlify,vscode,figma" />
+  </a>
+</p>
 
 ## Getting Started
 
@@ -51,20 +68,13 @@ npm run start
 
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+<p>These are school projects, and changes should not be made. </p>
 
 ## Contact
+ 
+<div align="center">
+<a href="https://www.linkedin.com/in/lars-sandell"><img height="50" src="https://github.com/larssandell/LarsSandell/blob/main/LinkedIN.png?raw=true"></a>
+<a href="https://www.facebook.com/BingoPingo"><img height="50" src="https://github.com/larssandell/LarsSandell/blob/main/Facebook.png?raw=true"></a>
+</div>
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
