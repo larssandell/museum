@@ -26,6 +26,7 @@ Using only CSS and HTML. And deployd with Netlify
 - Color schemes
 - CSS with DRY principle
 - WCAG principles
+- Design a logo
 
 ### Design tools
 - Figma
