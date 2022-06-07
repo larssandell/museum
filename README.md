@@ -1,40 +1,43 @@
 # The Science Museum
 
-![image](https://github.com/larssandell/smart-inspection-copy/blob/main/smartinspection.png)
+![image](https://github.com/larssandell/museum/blob/main/museum.png)
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+For this school project i was tasked to design and create a homepage for The Science Museum, the target audience is kids but also the parents.
+Using only CSS and HTML.
 
-In this school project i choosed to remake a homepage for a local company Smart Inspection.
-For the project i was tasked to design a new homepage, create the homepage with HTML,CSS and JavaScript.
-i used wordpress as a headless CMS and create content so i could fetch the data to the site.
 
 Pages that it includes:
 - Home page
 - About page
-- list of blogs
-- blog specific page
-- Contact page
+- Exhibitions
+- Events
+- Exhibition spesific
 
-### JavaScript
+### HTML and CSS
 
-- Features a latest post carousel
-- API Call
-- Form submit validator
-- String query | blog spesific
+- Responsive site
+- Search engine optimization
+- CSS with DRY principle
+- WCAG principles
+
+### Design
+- Color schemes
+- CSS with DRY principle
+- WCAG principles
+- 
 
 ### Design tools
 - Figma
 - Photoshop
 - Illustrator
-- Maze for Interaction Design
 
 ## Built With
 
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,github,ai,ps,netlify,vscode,figma" />
+    <img src="https://skillicons.dev/icons?i=html,css,github,ai,ps,netlify,vscode,figma" />
   </a>
 </p>
 
