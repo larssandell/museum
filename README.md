@@ -26,7 +26,6 @@ Pages that it includes:
 - Color schemes
 - CSS with DRY principle
 - WCAG principles
-- 
 
 ### Design tools
 - Figma
