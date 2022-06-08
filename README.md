@@ -4,8 +4,8 @@
 
 ## Description
 
-For this school project i was tasked to design and create a homepage for The Science Museum, the target audience is kids but also the parents.
-Using only CSS and HTML. And deployd with Netlify
+For this school project I was tasked to design and create a homepage for The Science Museum, the target audience is kids but also the parents. 
+Using only CSS and HTML. And deployed with Netlify. 
 
 
 ### Pages that it includes:
