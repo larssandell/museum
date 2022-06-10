@@ -33,6 +33,9 @@ Using only CSS and HTML. And deployed with Netlify.
 - Photoshop
 - Illustrator
 
+## Improvements
+<a href="https://github.com/larssandell/museum/blob/main/Improvements.md">Here</a>
+
 ## Built With
 
 <p>
